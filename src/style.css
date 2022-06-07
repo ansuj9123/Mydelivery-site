@@ -1,0 +1,205 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #262626;
+}
+
+li {
+  list-style: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-branding {
+  font-size: 2rem;
+}
+.nav-link:hover {
+  color: dodgerblue;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    .nav-item {
+      margin: 16px 0;
+    }
+
+    .nav-menu.active {
+      left: 0;
+    }
+  }
+}
+
+.slider {
+  height: 1600px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.container {
+  width: 1600px;
+  margin: auto;
+}
+
+.subcontainer {
+  width: 85%;
+  margin: auto;
+}
+
+.controller {
+  display: flex;
+  justify-content: space-between;
+}
+
+#controls i {
+  color: white;
+  font-size: 1rem;
+}
+
+.previous,
+.next {
+  padding: 2px;
+  width: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: none;
+  transition: 0.7s ease-in-out;
+  border: 3px solid white;
+  background-color: black;
+  box-shadow: 0 0 5px #bbb;
+}
+
+.previous,.next: hover {
+  border: 3px solid gray;
+}
+
+.slide-img {
+  width: 100%;
+  height: 650px;
+  
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.slide-img:hover {
+  box-shadow: 0 0 0 200px rgb(0, 0, 0, 0.9) inset;
+}
+
+.slide-img a {
+  text-decoration: none;
+  transform: scale(0);
+  transition: 0.8s;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 0;
+}
+
+.slide-img:hover a {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.img-1 {
+  background-image: url(https://previews.123rf.com/images/andreypopov/andreypopov1801/andreypopov180102012/94648186-delivery-man-standing-near-the-van-holding-cardboard-box.jpg);
+}
+
+.img-2 {
+  background-image: url(https://previews.123rf.com/images/andreypopov/andreypopov1507/andreypopov150700656/42611845-gl%C3%BCckliche-lieferung-man-holding-k%C3%A4stchen-vor-van.jpg);
+}
+
+.img-3 {
+  background-image: url(https://cdn5.vectorstock.com/i/1000x1000/33/49/various-types-of-vans-and-pickups-vector-12033349.jpg);
+}
+
+.img-4 {
+  background-image: url(https://www.carscoops.com/wp-content/uploads/2019/09/7574c172-amazon-rivian-van-01.jpg);
+}
+
+.img-5 {
+  background-image: url(https://www.manandvantree.co.uk/oc-content/uploads/190/11170.jpg);
+}
+@media (max-width: 1600px) {
+  .container {
+    width: 100%;
+    
+  }
+
+  .comment{
+  margin-left: 35%;
+  justify-content: center;
+  }
+  .submit-button{
+    display: block;
+    margin-left: -0.1%;
+    width: 43.9%;
+    background: black;
+    color: white;
+    padding: 0.25rem;
+     border: 1px solid #2471A3;
+    border-radius: 0.25rem;
+  }
